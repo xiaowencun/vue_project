@@ -1,0 +1,2475 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+body {
+    font-size: 12px;
+    background: #F6F6F6;
+}
+
+p,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+button {
+    user-select: none;
+    background: transparent;
+    border: none;
+    line-height: 1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers 适配谷歌 */
+    color: #999;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 适配火狐 */
+    color: #999;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ 适配火狐 */
+    color: #999;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10+  适配ie*/
+    color: #999;
+}
+
+.van-field__control::placeholder {
+    color: #999;
+}
+
+.mtb8 {
+    margin: 8px 0;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mt14 {
+    margin-top: 14px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt45 {
+    margin-top: 45px;
+}
+
+.mb12 {
+    margin-bottom: 12px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.plr30 {
+    padding: 0 30px;
+}
+
+.plr10 {
+    padding: 0 10px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* --------- 修改vant样式 --------- */
+
+
+/* 顶部bar */
+
+.van-nav-bar {
+    height: 45px;
+    z-index: 2;
+}
+
+.van-nav-bar .van-icon {
+    color: #222;
+}
+
+.van-nav-bar__text {
+    color: #666;
+}
+
+
+/* 复选 */
+
+.van-checkbox__icon--checked .van-icon,
+.van-radio__icon--checked .van-icon {
+    border-color: #FF3939;
+    background-color: #FF3939;
+}
+
+
+/* 提交按钮 */
+
+.van-submit-bar__bar {
+    font-size: 13px;
+}
+
+.van-submit-bar__button--danger {
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+}
+
+.van-submit-bar__price--integer {
+    font-size: 16px;
+}
+
+
+/* 开关 */
+
+.van-switch--on {
+    background: #D94646;
+}
+
+.van-address-edit__buttons .van-button--danger {
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+    border: none;
+}
+
+
+/* 购物车图标 */
+
+.van-goods-action {
+    padding: 0 10px;
+}
+
+.van-goods-action-icon {
+    min-width: 60px;
+}
+
+
+/* 轮播图 */
+
+
+/* .van-swipe .van-swipe__track,.van-swipe .van-swipe-item{-webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform-style: preserve-3d; transform-style: preserve-3d;} */
+
+
+/* 弹窗确定按钮颜色 */
+
+.van-dialog__confirm,
+.van-dialog__confirm:active {
+    color: #FF3939;
+}
+
+.review .van-cell__title {
+    width: 90px;
+    flex: none;
+}
+
+.review .van-cell__value {
+    text-align: left;
+}
+
+.price {
+    color: #D94646;
+}
+
+.van-dialog {
+    border-radius: 8px;
+}
+
+
+/* flex布局 */
+
+.flex {
+    display: flex;
+}
+
+
+/* 水平居中 */
+
+.flex-jc {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 水平两端对齐 */
+
+.flex-jsb {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 水平两端对齐，可换行 */
+
+.flex-jsb-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* 水平两端对齐垂直居中 */
+
+.flex-jsb-ac {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 水平均匀间隔垂直居中 */
+
+.flex-ja-ac {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* 水平垂直居中 */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 垂直居中 */
+
+.flex-ac {
+    display: flex;
+    align-items: center;
+}
+
+
+/* 纵向排列两端对齐 */
+
+.flex-col-jsb-ac {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 纵向排列 */
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 纵向垂直居中 */
+
+.flex-col-jc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-je-ac {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* 首页 */
+
+.bgwhite {
+    background: #fff;
+}
+
+
+/* 顶部搜索 */
+
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    padding: 0 15px;
+    z-index: 5;
+    border-bottom: 1px solid #EBEBEB
+}
+
+.topBar a {
+    width: 22px;
+    height: 22px;
+    margin-left: 20px;
+}
+
+.search {
+    height: 33px;
+    line-height: 33px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 0 12px;
+}
+
+.btnShare {
+    background: url(../images/index/share.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.btnCart {
+    position: relative;
+    background: url(../images/index/cart.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.btnCart span {
+    position: absolute;
+    right: -8px;
+    top: -6px;
+    background: #DE3838;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+}
+
+
+/* 内容区 */
+
+.main {
+    padding-bottom: 60px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner .van-image {
+    display: block;
+    width: 100%;
+}
+
+.banner p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0 15px;
+}
+
+.tit-img {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+.tit-img img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+
+/* 热门分类 */
+
+.hots {
+    padding: 8px 0 0 8px;
+}
+
+.hots .van-image {
+    width: calc(50% - 8px);
+    margin: 0 8px 8px 0;
+}
+
+
+/* 猜你喜欢 */
+
+.guess {
+    height: 44px;
+    font-size: 15px;
+    line-height: 1;
+    color: #666;
+}
+
+.guess:before,
+.guess:after {
+    content: '';
+    width: 106px;
+    height: 6px;
+    margin: 0 10px;
+}
+
+.guess:before {
+    background: url(../images/index/lineL.svg) no-repeat;
+    background-size: contain;
+}
+
+.guess:after {
+    background: url(../images/index/lineR.svg) no-repeat;
+    background-size: contain;
+}
+
+
+/* 列表 */
+
+.item-list {
+    flex-wrap: wrap;
+}
+
+.item-list dl {
+    width: 50%;
+    border-style: solid;
+    border-color: #EDEDED;
+    border-width: 0 0 1px 0;
+    box-sizing: border-box;
+}
+
+.item-list dl:nth-of-type(odd) {
+    border-right: 1px solid #EDEDED;
+}
+
+.item-list dl dt {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-list dl dt .van-image {
+    max-width: 150px;
+}
+
+.item-list dl dd {
+    padding: 0 15px 20px;
+}
+
+.item-list .title {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 9px;
+    font-weight: normal;
+}
+
+.item-list .price {
+    font-size: 14px;
+}
+
+.item-list .sale {
+    color: #999;
+}
+
+
+/* 购物车 */
+
+.fixedbar {
+    height: 45px;
+    background: #F6F6F6;
+    padding: 10px;
+}
+
+.fixedbar .bgwhite {
+    height: 100%;
+    padding: 0 10px;
+}
+
+.fixedbar .van-button--default {
+    border: none;
+    padding: 0;
+    color: #999;
+}
+
+.fixedbar .van-button:active::before {
+    opacity: 0;
+}
+
+.cartBox {
+    height: calc(100vh - 165px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 10px 10px;
+}
+
+.item-card .check {
+    width: 40px;
+    height: 114px;
+    justify-content: center;
+}
+
+.item-card dl {
+    padding: 15px 0;
+    flex: 1;
+}
+
+.item-card dl dt {
+    display: flex;
+    align-items: center;
+    width: 84px;
+    height: 84px;
+    box-sizing: border-box;
+    padding: 9px;
+    background: #F4F4F4;
+    border-radius: 4px;
+}
+
+.item-card dl dt .van-image {
+    width: 100%;
+}
+
+.item-card dl dd {
+    height: 84px;
+    flex: 1;
+    padding: 0 10px 0 13px;
+}
+
+.item-card dl dd .gray {
+    color: #666;
+    font-size: 11px;
+}
+
+.item-card .sku {
+    background: #F5F5F5;
+    border-radius: 20px;
+    width: 130px;
+    height: 20px;
+    padding: 0 10px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.item-card .sku:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid #222;
+    border-bottom: 1px solid #222;
+    transform: rotate(-45deg) translateY(-50%);
+    float: right;
+}
+
+.item-card .title {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 6px;
+}
+
+.item-card .price {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.delete-button {
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+}
+
+
+/* 登录 */
+
+.wrap {
+    height: 100vh;
+}
+
+.logoBox {
+    padding: 71px 30px 25px;
+}
+
+.logoBox img {
+    width: 53px;
+    height: 53px;
+}
+
+.logoBox span {
+    font-size: 23px;
+    font-weight: 600;
+    color: #222;
+    margin: auto 15px;
+}
+
+.inputCon {
+    padding: 13px 30px;
+}
+
+.btnBox {
+    padding: 0 15px 30px;
+}
+
+.btnBox button {
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.btn-white {
+    border: 1px solid #979797;
+    color: #666;
+}
+
+.btn-red {
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+    color: #fff
+}
+
+.pwdBtn {
+    font-size: 14px;
+    color: #333;
+}
+
+.getBtn {
+    width: 125px;
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+    border-radius: 10px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    height: 48px;
+}
+
+.tip {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.tip p {
+    position: relative;
+    margin: 0 auto;
+    height: 19px;
+    font-size: 13px;
+    color: #666;
+    line-height: 19px;
+}
+
+.resultBox {
+    padding: 20px 20px 30px;
+    text-align: center;
+}
+
+.resultBox .reImg {
+    width: 60px;
+    height: 60px;
+}
+
+.resultBox p {
+    height: 50px;
+    font-size: 18px;
+    color: #222;
+    line-height: 56px;
+}
+
+.resultBox span {
+    font-size: 13px;
+    color: #666;
+    line-height: 19px;
+}
+
+.codeBox {
+    padding: 80px 20px;
+}
+
+.codeBox h3 {
+    height: 33px;
+    font-size: 23px;
+    color: #222;
+    line-height: 33px;
+}
+
+.codeBox>span {
+    height: 21px;
+    font-size: 13px;
+    color: #222;
+    line-height: 21px;
+}
+
+.code-btn {
+    width: 120px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #979797;
+    line-height: 33px;
+    font-size: 13px;
+    color: #999;
+    padding: 0;
+}
+
+.code-btn .van-button__text .van-count-down {
+    display: inline;
+    color: #999;
+}
+
+.pd-code {
+    padding: 18px 0;
+}
+
+.six-digit-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.six-digit-wrapper .input {
+    display: flex;
+    width: 60px;
+    margin-right: 32px;
+    height: 44px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    outline: none;
+    border: solid 1px #d2d2d2;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.mgt10 {
+    margin-top: 10px;
+}
+
+.bgcf6 {
+    background-color: #f6f6f6;
+}
+
+.radio-font {
+    font-size: 13px;
+    color: #666;
+}
+
+.radio-font a {
+    color: #3477CA;
+}
+
+.van-radio__icon {
+    font-size: 17px;
+}
+
+.border {
+    position: relative;
+}
+
+.border:after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    transform: scaleY(.5);
+}
+
+#graphInput,
+#graphInput2,
+#graphInput3 {
+    outline: none;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#numberInput,
+#numberInput2,
+#numberInput3 {
+    outline: none;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.btnForget {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    line-height: 50px;
+}
+
+.pwd-span {
+    font-size: 14px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+/* 我的 */
+
+.userHead {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 66px;
+    height: 66px;
+    opacity: 0;
+}
+
+.userHead .van-uploader__upload {
+    width: 66px;
+    height: 66px;
+    margin: 0;
+}
+
+.user-info {
+    position: relative;
+    padding: 0 10px;
+    height: 150px;
+    background: linear-gradient(310deg, #e4e4e4 0%, #fff 100%);
+}
+
+.user-info:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/mine/bg-user.png) no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 143px;
+    z-index: 0;
+}
+
+.user-info dt {
+    position: relative;
+    width: 66px;
+}
+
+.user-info dt .van-image {
+    width: 66px;
+    height: 66px;
+    border-radius: 100px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.user-info dt button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.user-info dd {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    padding-left: 12px;
+}
+
+.user-info dd h3 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+.user-info dd p {
+    color: #666;
+    line-height: 18px;
+}
+
+.user-info dd button {
+    width: 84px;
+    line-height: 22px;
+    border: 1px solid #8E8E8E;
+    border-radius: 24px;
+    background: transparent;
+    color: #666;
+}
+
+.cont {
+    position: relative;
+    padding: 0 10px 30px;
+    top: -30px;
+}
+
+.fn-box {
+    position: relative;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.fn-box:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    height: 18px;
+    border-right: 1px solid #D4D4D4;
+}
+
+.fn-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    height: 100%;
+}
+
+.fn-box button .van-image {
+    margin-right: 13px;
+}
+
+.verify-box {
+    background: linear-gradient(127deg, #ffecce 0%, #ffd18a 100%);
+    border-radius: 0px 0px 8px 8px;
+    padding: 0 13px;
+    line-height: 42px;
+    color: #BA6920;
+    margin: 0 10px;
+}
+
+.verify-box .van-image {
+    margin-right: 7px;
+}
+
+.verify-box button {
+    width: 54px;
+    line-height: 20px;
+    color: #B76E27;
+    border: 1px solid #B76E27;
+    border-radius: 20px;
+    background: transparent;
+}
+
+.menu-box {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.menu-box .van-cell,
+.menu-box .van-cell__left-icon {
+    line-height: 30px;
+    align-items: center;
+}
+
+.menu-box .van-cell .van-image {
+    margin-right: 10px;
+}
+
+.menu-box .van-cell__value {
+    font-size: 13px;
+}
+
+.menu-box .van-cell:not(:last-child)::after {
+    border-color: #e3e3e3;
+}
+
+.menu-box li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    line-height: 17px;
+}
+
+.menu-box li p {
+    margin-top: 10px;
+}
+
+.menu-list>li {
+    position: relative;
+}
+
+.menu-list>li:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.menu-list>li:last-child:after {
+    display: none;
+}
+
+.menu-list .van-cell .van-image {
+    margin-right: 10px;
+}
+
+.tit-trans {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+.btn-light-red {
+    border: 1px solid #ff3939;
+    color: #ff3939;
+    height: 24px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+
+/* 地址管理 */
+
+.ad-list>dl {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.ad-list>dl>dt {
+    padding: 0 15px;
+    height: 90px;
+}
+
+.ad-list>dl>dd {
+    height: 44px;
+    border-top: 1px solid #ddd;
+}
+
+.ad-list>dl>dd>button {
+    flex: 1;
+    color: #666;
+}
+
+.ad-list>dl>dd>.van-radio {
+    justify-content: center;
+    width: 135px;
+}
+
+.ad-list>dl>dd .van-radio__label {
+    color: #666;
+    font-size: 13px;
+}
+
+.ad-list>dl>dd>button {
+    position: relative;
+    font-size: 13px;
+    background: transparent;
+    border: none;
+}
+
+.ad-list>dl>dd>button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 19px;
+    border-left: 1px solid #ddd;
+}
+
+.ad-list>dl>dd>button i {
+    font-size: 17px;
+    vertical-align: sub;
+}
+
+.ad-list>dl>dd>button span {
+    margin-left: 7px;
+}
+
+.ad-list .user {
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.ad-list .user span {
+    width: 5em;
+}
+
+.ad-list .act:after {
+    content: '默认';
+    margin-left: 15px;
+    padding: 0 9px;
+    line-height: 18px;
+    border-radius: 20px;
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+    color: #fff;
+    font-size: 12px;
+}
+
+.ad-list .address {
+    line-height: 20px;
+    color: #999;
+}
+
+.van-checkbox__icon {
+    font-size: 17px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 16px;
+    background-color: #fff;
+    border-top: 1px solid #ebedf0;
+}
+
+.footer .btnSub {
+    width: 100%;
+}
+
+.btnSub {
+    height: 40px;
+    background: linear-gradient(132deg, #ff3939 0%, #ff875d 100%);
+    border-radius: 22px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+}
+
+.btnSub:disabled {
+    opacity: 0.5;
+}
+
+.add-noticeBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+}
+
+.add-radio {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: auto 7px;
+}
+
+
+/* 商品详情 */
+
+.swip {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.swip .van-swipe-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swip .van-swipe-item .van-image {
+    max-width: 350px;
+}
+
+.page-num {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 26px;
+    line-height: 26px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 26px;
+}
+
+.price-box {
+    position: relative;
+    padding: 10px 15px 13px;
+}
+
+.price-box .share {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    padding: 0 13px 0 10px;
+    height: 28px;
+    border: none;
+    background: #EDEDED;
+    color: #666;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.price-box .share .van-image {
+    width: 15px;
+    margin-right: 9px;
+}
+
+.price-box .price {
+    line-height: 34px;
+}
+
+.price-box .price span {
+    font-size: 24px;
+    margin-right: 6px;
+}
+
+.price-box .info {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.price-box .gray {
+    color: #888;
+    line-height: 17px;
+    margin-top: 5px;
+}
+
+.specs {
+    font-size: 14px;
+}
+
+.specs .gray {
+    color: #999;
+    margin-right: 15px;
+}
+
+.specs .info {
+    color: #666;
+}
+
+.intro-box {
+    padding: 18px 15px 8px;
+    font-size: 14px;
+}
+
+.intro-box p {
+    margin-bottom: 15px;
+}
+
+.intro-box .gray {
+    color: #888;
+    margin-right: 15px;
+    min-width: 4em;
+}
+
+.intro-box .info {
+    color: #666;
+}
+
+.goods-info {
+    text-align: center;
+}
+
+.pick-num {
+    padding: 16px 0 0 16px;
+    align-items: flex-end;
+}
+
+.pick-num dd {
+    padding-left: 15px;
+}
+
+.pick-num dd p {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.pick-num .red {
+    color: #E53737;
+}
+
+.pick-num .gray {
+    color: #666;
+}
+
+
+/* 商品列表 */
+
+.tab-list .van-tabs__wrap {
+    height: 54px;
+}
+
+.tab-list .van-tab {
+    background: #F1F1F1;
+    border-radius: 15px;
+    width: 70px;
+    height: 28px;
+    margin: 13px 9px;
+    color: #666;
+    flex: inherit;
+}
+
+.tab-list .van-tab--active {
+    color: #DC3E3C;
+    background-color: #fdedeb;
+    border: 1px solid #dc3e3c;
+}
+
+.tab-list .van-tabs__line {
+    display: none;
+}
+
+.tab-list .van-tab__text--ellipsis {
+    font-size: 12px;
+}
+
+.list-img {
+    width: 6px;
+    height: 9px;
+    margin-left: 3px;
+}
+
+
+/* 购买确认 */
+
+.cont-box {
+    padding: 0 10px 130px;
+}
+
+.cont-box .ad-list dl {
+    background: url(../images/shopping/address.png) 50% 0 repeat-x #fff;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.item-box {
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.item-box .orderNum {
+    padding: 15px 15px 0
+}
+
+.item-box dl {
+    padding: 15px;
+}
+
+.item-box dl>dt {
+    width: 84px;
+    height: 84px;
+    padding: 9px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 15px;
+    background: #F4F4F4;
+}
+
+.item-box dl>dt .van-image {
+    width: 100%;
+}
+
+.item-box dl>dd {
+    flex: 1;
+}
+
+.item-box dl>dd .title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.item-box dl>dd .gray {
+    color: #666;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.item-box dl>dd .price {
+    font-size: 16px;
+}
+
+.coupon-btn {
+    border-radius: 5px;
+}
+
+.coupon-btn .van-coupon-cell--selected {
+    color: #D94646;
+}
+
+.payment {
+    border-radius: 5px;
+    padding: 12px 15px 10px;
+    margin-top: 10px;
+}
+
+.payment p {
+    height: 20px;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.payment .gray {
+    color: #666;
+}
+
+.payment .note {
+    margin-top: -3px;
+    font-size: 12px;
+}
+
+.subBar {
+    bottom: 50px;
+}
+
+.subBar .gray {
+    font-size: 10px;
+    margin-right: 8px;
+    color: #999;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.pl16 {
+    padding-left: 16px;
+}
+
+.ft13 {
+    font-size: 13px;
+}
+
+.ft11 {
+    font-size: 11px;
+}
+
+.blue {
+    color: #3477CA;
+}
+
+.pickInfo {
+    padding: 12px 16px;
+    color: #999;
+}
+
+.pickInfo .red {
+    color: #E53737;
+}
+
+.pickLocation dl {
+    padding: 0 15px 0 18px;
+    height: 80px;
+}
+
+.pickLocation dl dt {
+    width: 26px;
+    font-size: 26px;
+    margin-right: 17px;
+}
+
+.pickLocation dl dd {
+    flex: 1;
+}
+
+.pickLocation dl dd h3 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.pickLocation dl dd p {
+    font-size: 13px;
+    color: #999;
+    line-height: 20px;
+}
+
+.van-action-sheet .pickLocation dl {
+    margin-bottom: 10px;
+}
+
+.total-price {
+    text-align: center;
+}
+
+.total-price dt {
+    font-size: 16px;
+    line-height: 54px;
+}
+
+.total-price dd {
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.payAcc {
+    line-height: 30px;
+}
+
+.payAcc .van-field__button {
+    margin-right: -16px;
+}
+
+.payAcc .van-button--small {
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+.payAcc .van-button--small:before {
+    display: none;
+}
+
+.pop-tit {
+    font-size: 16px;
+    line-height: 54px;
+    text-align: center;
+}
+
+.card-pick .van-cell__value {
+    display: flex;
+    align-items: center;
+    flex: none;
+}
+
+.card-pick .close {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.card-pick .close .van-icon {
+    display: block;
+}
+
+.notice {
+    padding: 10px 16px;
+    color: #969799;
+}
+
+.bold .van-field__label {
+    font-weight: bold;
+}
+
+
+/* 支付结果 */
+
+.payImg {
+    width: 95px;
+    height: 95px;
+}
+
+
+/* 支付方式 */
+
+.wayBox {
+    padding: 55px 0;
+}
+
+.wayImg {
+    width: 30px;
+    height: 30px;
+}
+
+.custom-title {
+    margin: auto 15px;
+    font-size: 15px;
+}
+
+
+/* 订单列表 */
+
+.orderList {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderList .van-tabs__wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.orderList .van-tabs__content {
+    flex: 1;
+    padding-top: 44px;
+}
+
+.orderList .item-box dl {
+    border-bottom: 1px solid #EDEDED;
+}
+
+.orderNum {
+    font-size: 13px;
+    color: #333;
+}
+
+.otherPrice {
+    padding: 0 15px;
+    border-bottom: 1px solid #EDEDED;
+    height: 40px;
+    font-size: 14px;
+}
+
+.otherPrice .gray {
+    color: #999;
+}
+
+.operaBox {
+    padding: 13px 15px 15px;
+    text-align: right;
+}
+
+.operaBox span {
+    font-size: 14px;
+}
+
+.operaBox button {
+    width: 82px;
+    height: 28px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.operaBox .gray {
+    color: #666;
+    margin-right: 4px;
+}
+
+.btn-gray {
+    color: #666;
+    border: 1px solid #bbb;
+}
+
+.round {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.round2 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.success-text {
+    border-top: 1px solid #EDEDED;
+    height: 41px;
+    line-height: 41px;
+    text-align: left;
+}
+
+.flex1 {
+    flex: 1
+}
+
+.order-em {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* 订单详情 */
+
+.bgRed {
+    background: linear-gradient(90deg, #ff3939 0%, #ff875d 100%);
+    height: 135px;
+}
+
+.order-nav .van-nav-bar {
+    background: linear-gradient(90deg, #ff3939 0%, #ff875d 100%);
+}
+
+.order-nav .van-nav-bar .van-icon,
+.order-nav .van-nav-bar__title {
+    color: #fff;
+}
+
+.order-nav .van-hairline--bottom::after {
+    display: none;
+}
+
+.order-status {
+    padding: 0 15px;
+    color: #fff;
+}
+
+.order-status .van-image {
+    width: 44px;
+    height: 44px;
+}
+
+.order-status dd {
+    margin-left: 18px;
+}
+
+.order-status .title {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 4px;
+}
+
+.order-status .van-count-down {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.order-box {
+    padding: 0 10px 80px;
+    margin-top: -25px;
+}
+
+.order-box .operaBox {
+    border: none;
+    margin-top: 0;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.btnCopy {
+    width: 40px;
+    height: 20px;
+    font-size: 11px;
+    background: #eee;
+    border-radius: 20px;
+    color: #666;
+}
+
+.footerBox {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    border-top: 1px solid #EBEBEB;
+    background: #fff;
+}
+
+.footerBox button {
+    padding: 0 10px;
+    min-width: 90px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.hitbox {
+    padding: 20px 15px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.confirm .van-dialog__header {
+    color: #FF3939;
+}
+
+.card-box {
+    padding: 10px 15px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.code-box {
+    left: 0;
+    right: 0;
+    top: 50px;
+    height: 147px;
+    overflow-y: auto;
+    text-align: center;
+    background: #f8f8f8;
+    margin: 5px 15px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch
+}
+
+.code-box p {
+    height: 28px;
+    background: #FFE6E0;
+    border-radius: 14px;
+    line-height: 28px;
+    color: #666;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+.code-box-bottom {
+    width: 52px;
+    height: 24px;
+    line-height: 24px;
+    background: #FF875D;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+.card-userd-text {
+    height: 18px;
+    padding: 0px 15px 10px;
+}
+
+.inputCon .van-field__control {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* 卡服务 */
+
+.orcImg {
+    width: 20px;
+    height: 20px;
+}
+
+.rechage-title {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 15px;
+    display: flex;
+}
+
+.border-b {
+    border-top: 1px solid #ddd;
+}
+
+.rechage-title p {
+    flex: 1;
+}
+
+.rechage-title span {
+    font-size: 12px;
+    color: #666;
+}
+
+.priceBox .van-button {
+    width: 105px;
+    height: 37px;
+}
+
+.coustoms-cell .van-cell__title {
+    flex: 3;
+}
+
+.orcImg {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-gr input {
+    display: none;
+}
+
+.radio-gr label span {
+    width: 58px;
+    height: 20px;
+    border: 1px solid #aaa;
+    border-radius: 22px;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 15px;
+    font-size: 11px;
+}
+
+.radio-gr label input:checked+span {
+    background: #D94646;
+    border-color: #D94646;
+    color: #fff;
+}
+
+.service-img {
+    width: 50px;
+    height: 50px;
+}
+
+.coustom-cell {
+    align-items: center;
+}
+
+.card-lable {
+    margin-left: 15px;
+}
+
+.card-lable p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-lable span {
+    font-size: 12px;
+    color: #666;
+}
+
+.card-title {
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.bill-bgRed {
+    background: url(../images/Service/bg.svg) no-repeat;
+    background-size: cover;
+    height: 120px;
+}
+
+.bill-text {
+    text-align: center;
+    color: #fff;
+    padding: 35px 0;
+    box-sizing: border-box;
+}
+
+.bill-text p {
+    font-size: 19px;
+}
+
+.bill-text span {
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.bill-list>p {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.bill-list>p span:before {
+    content: "";
+    border-left: 3px solid #FF3E3B;
+    margin-right: 10px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bill-list ul li {
+    height: 80px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.bList-fir {
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    border: 1px dashed;
+    border-radius: 50%;
+}
+
+.border-red {
+    border-color: #DE3838;
+    color: #DE3838;
+}
+
+.border-green {
+    border-color: #619A2F;
+    color: #619A2F;
+}
+
+.bList-Sec {
+    margin: auto 12px;
+    flex: 3;
+}
+
+.bList-Sec p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.bList-Sec span {
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+
+.bList-thr {
+    font-size: 14px;
+}
+
+.green {
+    color: #619A2F;
+}
+
+.explain {
+    height: 102px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.explain img {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+.explain .gray {
+    color: #999;
+}
+
+.explain .blue {
+    color: #139AFF;
+}
+
+
+/* 上传身份证 */
+
+.hint-tit {
+    padding: 12px 30px;
+    line-height: 24px;
+    text-align: center;
+    color: #ff3939;
+    font-size: 14px;
+}
+
+.upload-box {
+    padding: 0 10px;
+}
+
+.upload-box dl {
+    height: 190px;
+    box-sizing: border-box;
+    padding: 14px 0;
+    margin-bottom: 15px;
+}
+
+.upload-box dl dt {
+    margin: 0 auto;
+    width: 202px;
+    height: 138px;
+    background: url(../images/login/bg.png) no-repeat;
+    background-size: contain;
+}
+
+.upload-id {
+    display: block;
+    width: 202px;
+    height: 138px;
+    margin: 0;
+    padding: 7px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.upload-id .van-uploader__upload,
+.upload-id .van-icon__image,
+.upload-id .van-uploader__preview-image {
+    margin: 0;
+    width: 188px;
+    height: 124px;
+}
+
+.upload-id .van-uploader__preview {
+    margin: 0;
+}
+
+.upload-id .van-uploader__preview-delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -6px;
+    top: -6px;
+}
+
+.upload-id .van-uploader__preview-delete-icon {
+    position: static;
+    top: auto;
+    right: auto;
+    transform: scale(1);
+    font-size: 14px;
+}
+
+.upload-box dl dd {
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.idpic {
+    margin: 10px;
+    width: 180px;
+    height: 118px;
+    vertical-align: top;
+}
+
+
+/* 暂停服务 */
+
+.stop-serv {
+    height: 100vh;
+}
+
+.stop-serv .van-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    width: 220px;
+    height: 164px;
+}
+
+
+/* 认证弹窗 */
+
+.prove-dialog .van-dialog {
+    width: 80%;
+}
+
+.prove-dialog .hitbox {
+    font-size: 14px;
+}
+
+
+/* 修改手机号 */
+
+.mt12 {
+    margin-top: 12px;
+}
+
+.inptBox {
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.inptBox .label {
+    width: 90px;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.popBox {
+    width: 80%;
+    padding: 10px 10px 20px;
+}
+
+.noteTit {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+/* 合约样式 */
+
+.term {
+    padding: 20px 5px 60px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.term h1 {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.term h3 {
+    font-size: 13px;
+}
+
+.term .content p,
+.term .content h3 {
+    text-indent: 2em;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.term .content div {
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.term i {
+    font-weight: bold;
+}
+
+.term .title {
+    line-height: 30px;
+    margin: 10px 0 6px;
+}
+
+.term table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.term table td,
+.term table th {
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 28px;
+    padding: 6px;
+}
+
+.term table th {
+    background: #eee;
+}
+
+.term table td.alignL {
+    text-align: left;
+}
+
+.scorllterm {
+    background: #fff;
+    height: calc(100vh - 50px);
+    padding-bottom: 40px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.protocal {
+    width: 340px;
+    height: 80%;
+}
+
+.protocal .van-dialog__content {
+    position: static;
+    z-index: 1;
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.protocal .van-dialog__content .term {
+    padding-bottom: 20px;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.protocal .van-dialog__footer {
+    z-index: 2;
+}
+
+.agreeBox {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+}
+
+.agreeBox .van-button {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.agreeBox:before {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #ebedf0;
+    transform: scaleY(.5);
+}
+
+
+/* 输入或选择框 */
+
+.inpt-cell {
+    padding: 0 16px;
+}
+
+.action .van-action-sheet__content p {
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.action .van-action-sheet__content p:after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #ebedf0;
+    transform: scaleY(.5);
+}
+
+
+/* 新窗口打开遮罩 */
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.step1,
+.step2,
+.step3 {
+    position: absolute;
+}
+
+.step1 {
+    top: 15px;
+    right: 62px;
+    width: 94px;
+    height: 83px;
+}
+
+.step2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 118px;
+}
+
+.step3 {
+    bottom: 20px;
+    right: 84px;
+    width: 169px;
+    height: 94px;
+}
+
+.adrinfo .van-address-edit__fields .van-field__label {
+    width: 5em;
+}
+
+.shareBtn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 50px;
+    height: 40px;
+    border-radius: 100px 0 0 100px;
+    background: #fff;
+    box-shadow: 0px 1px 4px 1px rgba(190, 190, 190, 0.34);
+    border: 1px solid #B4B4B4;
+    padding: 0;
+}
+
+.shareBtn .van-image {
+    width: 20px;
+    height: 20px;
+}
+
+.resultPage {
+    background: #F6F6F6;
+    height: 100vh;
+    position: relative;
+    z-index: 110;
+}
+
+.userDetail .van-field__label {
+    width: 4.2em;
+}
+
+
+/* 判断iPhoneX 将 footer 的 padding-bottom 填充到最底部 */
+
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+    body,
+    .agreeBox,
+    .cartBox {
+        padding-bottom: constant(safe-area-inset-bottom, 20px);
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .subBar {
+        padding-bottom: 0;
+        bottom: calc(50px + constant(safe-area-inset-bottom, 20px));
+        bottom: calc(50px + env(safe-area-inset-bottom, 20px));
+    }
+}
+
+
+/* 推荐码 */
+
+
+/* .Inivt-code-box .van-dialog__footer--buttons{display: none;} */
+
+.Inivt-code-close {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
