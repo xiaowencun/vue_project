@@ -63,7 +63,7 @@ export default {
     // 点击重置按钮
     resetLoginForm() {
       // console.log(this);
-      this.$refs.loginFormRef.resetFields()
+        this.$refs.loginFormRef.resetFields()
     },
     // 点击登录
     login() {
